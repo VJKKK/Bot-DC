@@ -166,7 +166,7 @@ client.on('ready', () => {
         await interaction.reply({
             content: '請選擇一個選項：',
             components: [row],
-            ephemeral: true, // 是否僅用戶可見
+            ephemeral: true, 
             
         });
 
@@ -177,7 +177,7 @@ client.on('interactionCreate', (interaction) => {
   if (!interaction.isStringSelectMenu()) return;
 
   if (interaction.customId === 'example_menu') {
-    const selected = interaction.values[0]; // 獲取選中的值
+    const selected = interaction.values[0]; 
     interaction.update({
       content: selected,
       components: [],
