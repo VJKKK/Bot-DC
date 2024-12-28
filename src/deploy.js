@@ -14,13 +14,13 @@ const commands = [
   }
 ];
 
-const rest = new REST({ version: '10' }).setToken('MTMwMzE3NDA1OTM2OTk1NTMyOA.GE0mkX.iUR505I04TSjf_gu4frXo5vq0wIEkwZRO_LRDY');
-
+const rest = new REST({ version: '10' }).setToken('////////////////////////////Bot Token///////////////////////////////////');
+                                                   
 (async () => {
   try {
     console.log('Started refreshing application (/) commands.');
 
-    await rest.put(Routes.applicationGuildCommands("1303174059369955328","1317884732444377193"), { body: commands });
+    await rest.put(Routes.applicationGuildCommands("your user id","server id"), { body: commands });
 
     console.log('Successfully reloaded application (/) commands.');
   } catch (error) {
